@@ -12,9 +12,9 @@ func _ready():
 
 func _physics_process(_delta):
 	velocity = move_and_slide(velocity, Vector2.ZERO)
-	position.x = wrapf(position.x, 0, 1024)
-	position.y = wrapf(position.y, 0, 600)
-	
+	position.x = wrapf(position.x, 0,Global.VP.x)
+	position.y = wrapf(position.y, 0,Global.VP.y)
+
 
 
 func _on_Area2D_body_entered(body):
